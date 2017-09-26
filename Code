@@ -1,0 +1,17 @@
+#Footbal Pitch for Strata Data Specific
+ggplot()+
+  geom_point(alpha=0.2) +
+  coord_cartesian(xlim = c(-136,136),ylim = c(-15,210)) + 
+  geom_rect(xmin = -136, xmax = 136, ymin = 0, ymax = 210, fill = NA, color = "White",size=1)+
+  geom_rect(xmin = -37, xmax = 37, ymin = 22, ymax = 22, fill = NA, color = "White",size=0.5) +
+  geom_rect(xmin = -81, xmax = 81, ymin = 66, ymax = 66, fill = NA, color = "White",size=0.5)+
+  geom_rect(xmin = 37, xmax = 37, ymin = 0, ymax = 22, fill = NA, color = "White",size=0.5)+
+  geom_rect(xmin = -37, xmax = -37, ymin = 0, ymax = 22, fill = NA, color = "White",size=0.5)+
+  geom_rect(xmin = 81, xmax = 81, ymin = 0, ymax = 66, fill = NA, color = "White",size=0.5)+
+  geom_rect(xmin = -81, xmax = -81, ymin = 0, ymax = 66, fill = NA, color = "White",size=0.5)+
+  geom_rect(xmin = -15, xmax = 15, ymin = 0, ymax = -15, fill = NA, color = "White",size=1)+
+  geom_rect(xmin = -136, xmax = 136, ymin = 210, ymax = 210, fill = NA, color = "White",size=1)+
+  annotate("text", x = 0, y = -6, label = "Goal",size=3)+
+  theme(rect = element_blank(),line = element_blank(),panel.background = element_rect(fill = 'lightgreen'),
+        axis.title.y =element_blank(),axis.title.x = element_blank(),axis.text.x=element_blank(),
+        axis.text.y=element_blank())
